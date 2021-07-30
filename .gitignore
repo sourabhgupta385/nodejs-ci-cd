@@ -1,0 +1,15 @@
+coverage
+
+node_modules/
+
+.npm
+
+.eslintcache
+
+.vscode/*
+
+package-lock.json
+
+.editorconfig
+
+junit.xml
