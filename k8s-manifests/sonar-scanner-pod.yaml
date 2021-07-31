@@ -3,7 +3,7 @@ metadata:
   name: sonar-scanner
 spec:
   containers:
-  - name: jnlp
+  - name: sonar-scanner
     image: sonarsource/sonar-scanner-cli
     imagePullPolicy: Always
     tty: true
