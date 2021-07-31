@@ -1,0 +1,13 @@
+kind: Pod
+metadata:
+  name: sonar-scanner
+spec:
+  containers:
+  - name: jnlp
+    image: sonarsource/sonar-scanner-cli
+    imagePullPolicy: Always
+    tty: true
+    args:
+     - ${JENKINS_SECRET}
+     - ${JENKINS_AGENT_NAME}
+  imagePullSecret: image-registry-cred
