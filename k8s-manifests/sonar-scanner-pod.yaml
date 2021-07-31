@@ -14,11 +14,6 @@ spec:
           configMapKeyRef:
             name: pipeline-vars
             key: SONAR_HOST_URL
-      - name: SONAR_LOGIN
-        valueFrom:
-          secretKeyRef:
-            name: pipeline-secrets
-            key: SONAR_LOGIN
       - name: SONAR_TOKEN
         valueFrom:
           secretKeyRef:
