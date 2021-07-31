@@ -19,4 +19,9 @@ spec:
           secretKeyRef:
             name: pipeline-secrets
             key: SONAR_LOGIN
+      - name: SONAR_TOKEN
+        valueFrom:
+          secretKeyRef:
+            name: pipeline-secrets
+            key: SONAR_TOKEN            
   imagePullSecret: image-registry-cred
