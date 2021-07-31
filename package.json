@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "test": "jest --reporters='default' --reporters='jest-junit' --coverage"
+    "unit-test": "jest --reporters='default' --reporters='jest-junit' --coverage"
   },
   "author": "up1",
   "license": "ISC",
