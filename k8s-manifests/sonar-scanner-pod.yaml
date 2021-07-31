@@ -15,7 +15,7 @@ spec:
             key: SONAR_HOST_URL
       - name: SONAR_LOGIN
         valueFrom:
-          configMapKeyRef:
+          secretKeyRef:
             name: pipeline-secrets
             key: SONAR_LOGIN
   imagePullSecret: image-registry-cred
