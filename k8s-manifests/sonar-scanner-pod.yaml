@@ -5,7 +5,7 @@ spec:
   containers:
   - name: sonar-scanner
     image: sonarsource/sonar-scanner-cli
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
     tty: true
     env:
       - name: SONAR_HOST_URL
