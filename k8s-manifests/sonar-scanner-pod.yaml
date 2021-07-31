@@ -7,7 +7,15 @@ spec:
     image: sonarsource/sonar-scanner-cli
     imagePullPolicy: Always
     tty: true
-    args:
-     - ${JENKINS_SECRET}
-     - ${JENKINS_AGENT_NAME}
+    env:
+      - name: SONAR_HOST_URL
+        valueFrom:
+          configMapKeyRef:
+            name: pipeline-vars
+            key: SONAR_HOST_URL
+      - name: SONAR_LOGIN
+        valueFrom:
+          configMapKeyRef:
+            name: pipeline-secrets
+            key: SONAR_LOGIN
   imagePullSecret: image-registry-cred
