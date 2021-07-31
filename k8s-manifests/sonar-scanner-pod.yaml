@@ -7,7 +7,7 @@ spec:
     image: sonarsource/sonar-scanner-cli
     imagePullPolicy: IfNotPresent
     tty: true
-    command: ["ls"]
+    command: ["/bin/sh"]
     env:
       - name: SONAR_HOST_URL
         valueFrom:
